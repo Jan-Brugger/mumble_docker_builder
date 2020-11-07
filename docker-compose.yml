@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  mumble:
+    container_name: mumble
+    image: weltraumpenner/mumble:latest
+    restart: always
+    volumes:
+      - /opt/mumble:/var/lib/mumble-server
+      - /opt/mumble/mumble-server.ini:/etc/mumble-server.ini
+    ports:
+      - 64738:64738
